@@ -1,0 +1,12 @@
+filegroup(
+    name = "readme",
+    srcs = ["README.txt"],
+)
+
+filegroup(
+    name = "all_data",
+    srcs = [
+        "README.txt",
+        "//pkg_data/nested:fixture",
+    ],
+)

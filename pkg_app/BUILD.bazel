@@ -1,0 +1,11 @@
+genrule(
+    name = "app",
+    srcs = ["input.txt"],
+    outs = ["app.out"],
+    cmd = "cat $(SRCS) > $@",
+)
+
+alias(
+    name = "app_alias",
+    actual = ":app",
+)

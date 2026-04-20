@@ -1,0 +1,15 @@
+genrule(
+    name = "root_gen",
+    outs = ["root_gen.out"],
+    cmd = "echo root > $@",
+)
+
+filegroup(
+    name = "root_files",
+    srcs = ["root.txt"],
+)
+
+alias(
+    name = "root_alias",
+    actual = ":root_gen",
+)

@@ -1,0 +1,12 @@
+filegroup(
+    name = "sources",
+    srcs = glob(["*.txt"]),
+    visibility = ["//visibility:public"],
+)
+
+genrule(
+    name = "concat",
+    srcs = [":sources"],
+    outs = ["concat.out"],
+    cmd = "cat $(SRCS) > $@",
+)

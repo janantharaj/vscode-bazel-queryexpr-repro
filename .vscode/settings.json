@@ -1,0 +1,3 @@
+{
+    // "bazel.commandLine.queryExpression": "//pkg_app:app"
+}
